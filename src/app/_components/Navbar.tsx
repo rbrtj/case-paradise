@@ -3,19 +3,15 @@ import MaxWidthWrapper from "../../components/MaxWidthWrapper";
 import Link from "next/link";
 import {
   ClerkLoaded,
-  ClerkLoading,
   SignInButton,
-  SignOutButton,
   SignUpButton,
   UserButton,
 } from "@clerk/nextjs";
 import { Button, buttonVariants } from "../../components/ui/button";
 import { cn } from "@/lib/utils";
 import BalanceButton from "./BalanceButton";
-import { LogOut } from "lucide-react";
 
 const Navbar = async () => {
-  //   const { userId } = auth();
   const user = await currentUser();
 
   return (
